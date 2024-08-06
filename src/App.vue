@@ -1,7 +1,13 @@
 <script setup lang="ts">
 import HomeView from "@/views/HomeView.vue";
+import Tabbar from "@/components/Tabbar.vue";
 </script>
 
 <template>
-  <HomeView />
+  <div id="app">
+    <HomeView />
+    <Tabbar />
+  </div>
 </template>
+
+
