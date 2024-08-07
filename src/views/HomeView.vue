@@ -10,7 +10,7 @@ import { ref, onMounted } from 'vue';
 export default {
   name: 'App',
   setup() {
-    const userName = ref<string>('');
+    const userName = ref('');
 
     const getUserNameFromTelegram = () => {
       const telegramWebApp = window.Telegram.WebApp;

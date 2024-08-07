@@ -6,8 +6,11 @@ import Tabbar from "@/components/Tabbar.vue";
 <template>
   <div id="app">
     <HomeView />
-    <Tabbar />
+    <div class="tab-bar-wrapper">
+      <Tabbar />
+    </div>
   </div>
 </template>
+
 
 
