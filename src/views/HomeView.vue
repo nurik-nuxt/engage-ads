@@ -4,26 +4,18 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { ref, onMounted } from 'vue';
-
-interface TelegramUser {
-  id: number;
-  first_name: string;
-  last_name: string;
-  username: string;
-  language_code: string;
-}
 
 export default {
   name: 'App',
   setup() {
     const userName = ref<string>('');
 
-    const getUserNameFromTelegram = (): void => {
+    const getUserNameFromTelegram = () => {
       const telegramWebApp = window.Telegram.WebApp;
       if (telegramWebApp.initDataUnsafe && telegramWebApp.initDataUnsafe.user) {
-        const { first_name, last_name } = telegramWebApp.initDataUnsafe.user as TelegramUser;
+        const { first_name, last_name } = telegramWebApp.initDataUnsafe.user;
         userName.value = `${first_name} ${last_name}`;
       }
     };
