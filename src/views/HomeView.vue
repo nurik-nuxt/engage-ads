@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Welcome, {{ userName }}!</h1>
+    <span>Welcome, {{ userName }}!</span>
   </div>
 </template>
 
